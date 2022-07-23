@@ -1,8 +1,8 @@
 {
-  "name": "ffxiv-kill-counter",
+  "name": "ffxiv-kill-counter_test1",
   "version": "0.2.2",
   "private": true,
-  "repository": "https://github.com/ChalkPE/ffxiv-kill-counter",
+  "repository": "https://github.com/tests04/test1",
   "author": "ChalkPE",
   "license": "MIT",
   "scripts": {
