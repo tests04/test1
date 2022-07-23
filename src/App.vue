@@ -4,13 +4,13 @@
       <caption highlighted>
         <img
           class="btn"
-          alt="리셋"
+          alt="Reset"
           src="reset.png"
           @click="counter = {}">
 
         <img
           class="btn"
-          :alt="collapsed ? '펼치기' : '접기'"
+          :alt="collapsed ? '拡大' : '縮小'"
           :src="`filter_${collapsed}.png`"
           @click="collapsed = !collapsed">
       </caption>
@@ -30,7 +30,7 @@
     </table>
 
     <footer @click="openRepository">v{{ pkg.version }}</footer>
-    <div v-if="!me">플레이어 인식 불가!</div>
+    <div v-if="!me">プレイヤーの認識に失敗しました!</div>
   </div>
 </template>
 
@@ -83,7 +83,7 @@ export default {
     onGameLogLine (line) {
       switch (line[2].toLowerCase()) {
         case '0b3a':
-          const m = /^(.+?)[이가] (.+?)[을를] 쓰러뜨렸습니다\.$/.exec(line[4])
+          const m = /^(.+?)[me] (.+?)[entries] を倒した。\.$/.exec(line[4])
           return m !== null && m[1] === this.me.name && this.count(m[2])
       }
     },
